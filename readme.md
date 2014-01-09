@@ -11,11 +11,12 @@ Be sure to include the Facebook Javascript SDK
 Create a share object which will look like this - 
 <pre>
 var share_obj = {
-	method: "feed"
-	link: "LINK TO SHARE"
-	picture: "URL TO IMAGE MUST BE ABSOLUTE PATH"
-	name: "THE NAME DISPLAYED"
-	caption: "THE CAPTION"
+	app_id: YOUR_FACEBOOK_APP_ID,
+	method: "feed",
+	link: "LINK TO SHARE",
+	picture: "URL TO IMAGE MUST BE ABSOLUTE PATH",
+	name: "THE NAME DISPLAYED",
+	caption: "THE CAPTION",
 	description: "THE DESCRIPTION"
 }
 </pre>
