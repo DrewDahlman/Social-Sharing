@@ -1,11 +1,12 @@
 ## Social Sharing
-An easy javascript class for easy social sharing.
+An easy javascript class for easy custom social sharing.
 
 ## Requirements
 <b>Facebook</b><br/>
 Register an app with facebook http://developer.facebook.com<br/>
 Get the App ID<br/>
-Be sure to include the Facebook Javascript SDK
+Be sure to include the Facebook Javascript SDK<br/>
+Set the App domain in the Facebook app settings.
 
 ## How to use
 Create the sharer
