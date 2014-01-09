@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- JS -->
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+        <!-- Vendor -->
+
+        <!-- Resources -->
+        <script src='socialShare.js'></script>
+
+        <!-- App -->
+ 		
+    </head>
+    <body>
+    	<a href='#' id='facebook_share'>Share on Facebook</a>
+    	<br/>
+    	<a href='#' id='twitter_share'>Share on Twitter</a>
+
+        
+    	
+        <script>
+        	$(function(){
+
+        		// Init social share with FB_ID
+        		sharer = new SocialShare();
+
+        		var share_obj = {
+        			app_id: 392878397524142,
+					link: "http://www.thecuteness.com/uploaded_images/IMG_6086-754167.JPG",
+					picture: "http://www.thecuteness.com/uploaded_images/IMG_6086-754167.JPG",
+					name: "Social Share JS Test",
+					caption: "This is a test share from social share",
+					description: "This sweet post comes from social share js!"
+        		}
+        		
+        		// CLICKS
+        		$("#facebook_share").click(function(event){
+        			event.preventDefault();
+        			sharer.facebook_share(share_obj)
+        		});
+
+        		$("#twitter_share").click(function(event){
+        			event.preventDefault();
+        			sharer.twitter_share(share_obj)
+        		});
+        		
+        	})
+        </script>
+        <script>
+	        // Load the Facebook SDK asynchronously
+			(function(d){
+			 var js, id = 'facebook-jssdk', ref = d.getElementsByTagName('script')[0];
+			 if (d.getElementById(id)) {return;}
+			 js = d.createElement('script'); js.id = id; js.async = true;
+			 js.src = "//connect.facebook.net/en_US/all.js";
+			 ref.parentNode.insertBefore(js, ref);
+			}(document));
+        </script>
+       
+    </body>
+</html>
