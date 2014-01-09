@@ -23,17 +23,19 @@
 				status: true,
 				cookie: true,
 				xfbml: true
-			})
-			facebook_obj = {
-		      method: "feed",
-		      link: share_obj.link,
-		      picture: share_obj.image,
-		      name: share_obj.name,
-		      caption: share_obj.caption,
-		      description: share_obj.description
-		    }
+			});
 
-		    FB.ui(facebook_obj,self.share_success)
+			// create facebook share object
+			facebook_obj = {
+				method: "feed",
+				link: share_obj.link,
+				picture: share_obj.image,
+				name: share_obj.name,
+				caption: share_obj.caption,
+				description: share_obj.description
+			}
+
+			FB.ui(facebook_obj,self.share_success)
 		}
 
 		//////////////////////////////////////////////////////////////
