@@ -8,6 +8,11 @@ Get the App ID<br/>
 Be sure to include the Facebook Javascript SDK
 
 ## How to use
+Create the sharer
+<pre>
+var sharer = new SocialShare();
+</pre>
+
 Create a share object which will look like this - 
 <pre>
 var share_obj = {
@@ -23,10 +28,10 @@ var share_obj = {
 
 For Facebook:
 <pre>
-socialShare.facebook_share(share_obj);
+sharer.facebook_share(share_obj);
 </pre>
 
 For Twitter:
 <pre>
-socialShare.twitter_share(share_obj)
+sharer.twitter_share(share_obj)
 </pre>
