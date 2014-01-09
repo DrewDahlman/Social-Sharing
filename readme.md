@@ -4,7 +4,8 @@ An easy javascript class for easy social sharing.
 ## Requirements
 <b>Facebook</b><br/>
 Register an app with facebook http://developer.facebook.com<br/>
-Get the App ID
+Get the App ID<br/>
+Be sure to include the Facebook Javascript SDK
 
 ## How to use
 Create a share object which will look like this - 
