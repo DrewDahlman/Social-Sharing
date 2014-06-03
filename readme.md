@@ -19,12 +19,12 @@ You need to set your app to public for normal users to use the facebook share
 <b>g+:</b> Scrapes your page according to the URL passed. This looks at the meta tags.
 
 <pre>
-	<meta property="og:title" content="PAGE TITLE" />
+	`<meta property="og:title" content="PAGE TITLE" />
 	<meta property="og:site_name" content="SITE NAME"/>
 	<meta property="og:description" content="PAGE DESCRIPTION" />
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="DEFAULT IMAGE ABSOLUTE URL" />
-	<meta property="og:url" content="FULL SITE URL" />
+	<meta property="og:url" content="FULL SITE URL" />`
 </pre>
 
 ## How to use
