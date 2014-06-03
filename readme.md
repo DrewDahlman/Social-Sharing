@@ -9,7 +9,7 @@ Be sure to include the Facebook Javascript SDK<br/>
 Set the App domain in the Facebook app settings.<br/>
 You need to set your app to public for normal users to use the facebook share
 
-## FORMATTING AND DATA
+## Formatting and data
 <b>Facebook:</b> Accepts custom inputs and formatting
 
 <b>Twitter:</b> Accepts custom inputs and formatting, link will always be the last part of the tweet. If you want the link to be within the tweet don't include a link.
