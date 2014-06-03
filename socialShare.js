@@ -2,6 +2,13 @@
 //
 //	Social Share
 //
+// 	Each method accepts a share_object
+//	@link - link to share
+//	@picture - Picture to share
+//	@title - title for the share
+//	@caption - caption for share
+//	@description - description for share
+//
 //////////////////////////////////////////////////////////////
 (function() {
 	SocialShare = function() {
@@ -12,30 +19,25 @@
 		//	Facebook Share
 		//	@link - link to share
 		//	@picture - Picture to share
-		//	@name - Name for the share
+		//	@title - title for the share
 		//	@caption - caption for share
 		//	@description - description for share
 		//
 		//////////////////////////////////////////////////////////////
 		self.facebook_share = function(share_obj){
-			FB.init ({
-				appId: share_obj.app_id,
-				status: true,
-				cookie: true,
-				xfbml: true
-			});
 
 			// create facebook share object
 			facebook_obj = {
 				method: "feed",
 				link: share_obj.link,
 				picture: share_obj.image,
-				name: share_obj.name,
+				title: share_obj.title,
 				caption: share_obj.caption,
 				description: share_obj.description
 			}
 
-			FB.ui(facebook_obj,self.share_success)
+			FB.ui(facebook_obj, null);
+			
 		}
 
 		//////////////////////////////////////////////////////////////
@@ -46,10 +48,41 @@
 		//
 		//////////////////////////////////////////////////////////////
 		self.twitter_share = function(share_obj){
+
 			var windowProperties = "toolbar=no,menubar=no,scrollbars=no,statusbar=no,height=" + 250 + ",width=" + 500 + ",left=" + 150 + ",top=" + 150;
 		    var popwin = window.open("http://twitter.com/share?url=" + encodeURIComponent(share_obj.link) + "&text=" + encodeURIComponent(share_obj.description), 'newwin', windowProperties);
 		    popwin.focus();
+		
 		}
+
+		//////////////////////////////////////////////////////////////
+		//
+		//	LinkedIn
+		//	
+		//
+		//////////////////////////////////////////////////////////////
+		self.linkedin_share = function(share_obj){
+			
+			var windowProperties = "toolbar=no,menubar=no,scrollbars=no,statusbar=no,height=" + 250 + ",width=" + 500 + ",left=" + 150 + ",top=" + 150;
+		    var popwin = window.open("https://www.linkedin.com/shareArticle?summary="+encodeURIComponent(share_obj.description)+"&title="+encodeURIComponent(share_obj.title)+"&mini=true&url="+encodeURIComponent(share_obj.link)+"&source="+encodeURIComponent(share_obj.link), 'newwin', windowProperties);
+		    popwin.focus();
+
+		}
+
+		//////////////////////////////////////////////////////////////
+		//
+		//	LinkedIn
+		//	
+		//
+		//////////////////////////////////////////////////////////////
+		self.google_share = function(share_obj){
+			
+			var windowProperties = "toolbar=no,menubar=no,scrollbars=no,statusbar=no,height=" + 250 + ",width=" + 500 + ",left=" + 150 + ",top=" + 150;
+		    var popwin = window.open("https://plus.google.com/share?url="+encodeURIComponent(share_obj.link), 'newwin', windowProperties);
+		    popwin.focus();
+
+		}
+
 		return self;
 	}
 })();

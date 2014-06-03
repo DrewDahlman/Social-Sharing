@@ -19,6 +19,23 @@
         <script src='socialShare.js'></script>
 
         <!-- App -->
+        <script>
+          window.fbAsyncInit = function() {
+            FB.init({
+              appId      : '392878397524142',
+              xfbml      : true,
+              version    : 'v2.0'
+            });
+          };
+
+          (function(d, s, id){
+             var js, fjs = d.getElementsByTagName(s)[0];
+             if (d.getElementById(id)) {return;}
+             js = d.createElement(s); js.id = id;
+             js.src = "//connect.facebook.net/en_US/sdk.js";
+             fjs.parentNode.insertBefore(js, fjs);
+           }(document, 'script', 'facebook-jssdk'));
+        </script>
  		
     </head>
     <body>
@@ -35,7 +52,6 @@
         		sharer = new SocialShare();
 
         		var share_obj = {
-        			app_id: 392878397524142,
 					link: "http://www.thecuteness.com/uploaded_images/IMG_6086-754167.JPG",
 					picture: "http://www.thecuteness.com/uploaded_images/IMG_6086-754167.JPG",
 					name: "Social Share JS Test",
