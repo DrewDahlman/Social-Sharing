@@ -83,6 +83,21 @@
 
 		}
 
+		//////////////////////////////////////////////////////////////
+		//
+		//	Pinterest Share
+		//	@picture - Picture to share
+		//	@link - Link to share
+		//	@description - description for share
+		//
+		//////////////////////////////////////////////////////////////
+		self.pinterest_share = function(share_obj){
+
+		var windowProperties = "toolbar=no,menubar=no,scrollbars=no,statusbar=no,height=" + 250 + ",width=" + 500 + ",left=" + 150 + ",top=" + 150;
+		    var popwin = window.open("//www.pinterest.com/pin/create/link/?url='" + encodeURIComponent(share_obj.link) + "&media=" + encodeURIComponent(share_obj.picture) + "&description=" + encodeURIComponent(share_obj.description), 'newwin', windowProperties);
+		    popwin.focus();
+		}
+
 		return self;
 	}
 })();

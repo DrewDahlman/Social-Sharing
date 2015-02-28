@@ -14,17 +14,19 @@ You need to set your app to public for normal users to use the facebook share
 
 <b>Twitter:</b> Accepts custom inputs and formatting, link will always be the last part of the tweet. If you want the link to be within the tweet don't include a link.
 
+<b>Twitter:</b> Accepts custom inputs and formatting
+
 <b>LinkedIn:</b> Accepts custom inputs and formatting
 
 <b>g+:</b> Scrapes your page according to the URL passed. This looks at the meta tags.
 
 <pre>
-	<meta property="og:title" content="PAGE TITLE" />
+	`<meta property="og:title" content="PAGE TITLE" />
 	<meta property="og:site_name" content="SITE NAME"/>
 	<meta property="og:description" content="PAGE DESCRIPTION" />
 	<meta property="og:type" content="website" />
 	<meta property="og:image" content="DEFAULT IMAGE ABSOLUTE URL" />
-	<meta property="og:url" content="FULL SITE URL" />
+	<meta property="og:url" content="FULL SITE URL" />`
 </pre>
 
 ## How to use
@@ -63,4 +65,9 @@ sharer.linkedin_share(share_obj)
 For g+:
 <pre>
 sharer.google_share(share_obj)
+</pre>
+
+For Pinterest:
+<pre>
+sharer.pinterest_share(share_obj)
 </pre>
